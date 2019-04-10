@@ -1,4 +1,4 @@
-.PHONY: clean
+.PHONY: clean obj
 
 main: obj
 	$(CC) -o main *.o
