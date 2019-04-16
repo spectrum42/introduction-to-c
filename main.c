@@ -24,8 +24,15 @@ int main(int argc, char* argv[])
         line = input_getline();
         if(strcasecmp("quit", line) == 0) {
             playing = false;
+        } else if(strcasecmp("status", line) == 0) {
+            player_print(player);
+        } else if(strcasecmp("help", line) == 0) {
+            printf("Available commands:\n");
+            printf("    status - Show player status.\n");
+            printf("    help   - Show this help screen.\n");
+            printf("    quit   - Exit the program.\n");
         } else {
-            printf("Unknown command. Type \"quit\" to exit the program.\n");
+            printf("Unknown command. Type \"help\" for help, \"quit\" to exit the program.\n");
         }
     }
     player_free(player);
