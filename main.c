@@ -34,6 +34,7 @@ int main(int argc, char* argv[])
         } else {
             printf("Unknown command. Type \"help\" for help, \"quit\" to exit the program.\n");
         }
+        free(line);
     }
     player_free(player);
 
